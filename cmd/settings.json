@@ -1,0 +1,196 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "id": "User.copy.644BA8F2"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.A6751878"
+        },
+        {
+            "command": "find",
+            "id": "User.find"
+        }
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{d8e96812-b789-5068-a5ae-10b2fb53e95f}",
+    "initialCols": 74,
+    "initialRows": 21,
+    "keybindings": 
+    [
+        {
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "id": "User.paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "Terminal.SelectAll",
+            "keys": "ctrl+a"
+        },
+        {
+            "id": "User.splitPane.A6751878",
+            "keys": "alt+shift+d"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+a"
+        }
+    ],
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "padding": "0, 0, 0, 0",
+            "scrollbarState": "hidden"
+        },
+        "list": 
+        [
+            {
+                "colorScheme": "ModernDeepBlue",
+                "commandline": "wsl.exe -d Ubuntu-24.04",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "builtinGlyphs": true,
+                    "cellHeight": "1.2",
+                    "face": "JetBrains Mono NL"
+                },
+                "guid": "{d8e96812-b789-5068-a5ae-10b2fb53e95f}",
+                "hidden": false,
+                "icon": "https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png",
+                "name": "Ubuntu 24.04.1 LTS",
+                "opacity": 97,
+                "scrollbarState": "hidden",
+                "source": "CanonicalGroupLimited.Ubuntu24.04LTS_79rhkp1fndgsc",
+                "startingDirectory": "\\\\wsl$\\Ubuntu-24.04\\home\\Ullubiy",
+                "useAcrylic": false
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "automatic",
+                "colorScheme": "ModernDeepBlue",
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "face": "Cascadia Mono",
+                    "size": 12
+                },
+                "guid": "{21726039-5557-435e-bfda-70026577cf60}",
+                "hidden": false,
+                "historySize": 9001,
+                "icon": "ms-appx:///ProfileIcons/{0caa0dad-35be-5f56-a8ff-afceeeaa6101}.png",
+                "name": "Command Prompt",
+                "snapOnInput": true,
+                "startingDirectory": "%USERPROFILE%",
+                "useAcrylic": false
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "automatic",
+                "colorScheme": "ModernDeepBlue",
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "face": "Cascadia Mono",
+                    "size": 12
+                },
+                "guid": "{2f82f283-24bd-4a94-824a-28f05bd3485a}",
+                "hidden": false,
+                "historySize": 9001,
+                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
+                "name": "Windows PowerShell",
+                "snapOnInput": true,
+                "startingDirectory": "%USERPROFILE%",
+                "useAcrylic": false
+            }
+        ]
+    },
+    "schemes": 
+    [
+        {
+            "background": "#0F111A",
+            "black": "#0F111A",
+            "blue": "#57C7FF",
+            "brightBlack": "#454545",
+            "brightBlue": "#57C7FF",
+            "brightCyan": "#9AEDFE",
+            "brightGreen": "#5AF78E",
+            "brightPurple": "#FF6AC1",
+            "brightRed": "#FF5C5C",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#F3F99D",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#9AEDFE",
+            "foreground": "#E0E0E0",
+            "green": "#5AF78E",
+            "name": "ModernDeepBlue",
+            "purple": "#FF6AC1",
+            "red": "#FF5C5C",
+            "selectionBackground": "#2A2D3E",
+            "white": "#F1F1F1",
+            "yellow": "#F3F99D"
+        }
+    ],
+    "theme": "ModernSlateTheme",
+    "themes": 
+    [
+        {
+            "name": "ModernSlateTheme",
+            "tab": 
+            {
+                "background": "#0F111AFF",
+                "iconStyle": "default",
+                "showCloseButton": "always",
+                "unfocusedBackground": "#0F111AFF"
+            },
+            "tabRow": 
+            {
+                "background": "#08090FFF",
+                "unfocusedBackground": "#08090FFF"
+            },
+            "window": 
+            {
+                "applicationTheme": "dark",
+                "experimental.rainbowFrame": false,
+                "frame": "#08090FFF",
+                "unfocusedFrame": "#08090FFF",
+                "useMica": false
+            }
+        }
+    ]
+}
