@@ -1,17 +1,18 @@
 {
-    "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-auto",
+    "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
     "workbench.startupEditor": "none",
     "workbench.sideBar.location": "left",
+    "workbench.editor.editorActionsLocation": "titleBar",
 
     "editor.fontFamily": "JetBrains Mono",
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
+    "editor.semanticHighlighting.enabled": true,
 
     "explorer.compactFolders": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
 
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
     "terminal.integrated.fontWeightBold": "normal",
     "terminal.integrated.fontFamily": "JetBrains Mono",
     "terminal.integrated.cursorStyle": "line",
@@ -20,46 +21,24 @@
     "terminal.integrated.fontSize": 15,
     "terminal.integrated.initialHint": false,
 
+    "window.title": " ",
+    "window.customTitleBarVisibility": "never",
+    "window.titleBarStyle": "native",
+    "window.menuBarVisibility": "toggle",
+    "window.commandCenter": false,
+
     "json.format.keepLines": true,
     "extensions.ignoreRecommendations": true,
-    "debug.onTaskErrors": "showErrors",
-    "remote.autoForwardPortsSource": "hybrid",
-    "window.commandCenter": false,
-    "window.title": " ",
-
     "files.autoSave": "afterDelay",
-    "files.exclude": {
-        "**/__pycache__": true
-    },
-    "files.associations": {
-        "*.{a80,z80,asm,inc,s}": "asm-collection",
-        "*.{list,lis}": "asm-list-file",
-        "*.tci": "cpp"
-    },
 
     "python.languageServer": "Pylance",
     "python.analysis.typeCheckingMode": "strict",
 
-    "asm-code-lens.hexCalculator.showInDebug": false,
-
-    "hexeditor.columnWidth": 16,
-    "hexeditor.showDecodedText": true,
-    "hexeditor.defaultEndianness": "little",
-    "hexeditor.inspectorType": "aside",
-
-    "[cpp]": {
-        "editor.defaultFormatter": "xaver.clang-format",
-        "editor.suggest.insertMode": "insert"
-    },
-    "C_Cpp.clang_format_fallbackStyle": "LLVM",
     "C_Cpp.clang_format_style": "file",
     "C_Cpp.codeAnalysis.clangTidy.enabled": true,
-    "github.copilot.enable": {
-        "*": false,
-        "plaintext": false,
-        "markdown": false,
-        "scminput": false
+
+    "gopls": {
+        "ui.semanticTokens": true
     },
-    "workbench.colorTheme": "Dark Modern",
 }
 
