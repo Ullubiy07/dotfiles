@@ -1,23 +1,23 @@
 [Background]
-Color=30,34,41
+Color=18,21,32
 
 [BackgroundFaint]
-Color=46,52,57
+Color=16,16,19
 
 [BackgroundIntense]
-Color=13,15,17
+Color=16,16,19
 
 [Color0]
-Color=30,34,41
+Color=35,38,39
 
 [Color0Faint]
-Color=46,52,57
+Color=49,54,59
 
 [Color0Intense]
 Color=127,140,141
 
 [Color1]
-Color=255,34,0
+Color=255,0,0
 
 [Color1Faint]
 Color=255,0,0
@@ -26,49 +26,49 @@ Color=255,0,0
 Color=255,0,0
 
 [Color2]
-Color=68,133,58
+Color=144,238,144
 
 [Color2Faint]
-Color=50,100,44
+Color=0,255,0
 
 [Color2Intense]
-Color=85,166,73
+Color=0,255,0
 
 [Color3]
-Color=246,116,0
+Color=255,255,0
 
 [Color3Faint]
-Color=182,86,25
+Color=255,255,0
 
 [Color3Intense]
-Color=253,188,75
+Color=255,255,0
 
 [Color4]
-Color=29,153,243
+Color=0,255,255
 
 [Color4Faint]
-Color=27,102,143
+Color=0,255,255
 
 [Color4Intense]
-Color=61,174,233
+Color=0,255,255
 
 [Color5]
-Color=155,89,182
+Color=212,0,220
 
 [Color5Faint]
-Color=97,74,115
+Color=212,0,220
 
 [Color5Intense]
-Color=142,68,173
+Color=212,0,220
 
 [Color6]
-Color=26,188,156
+Color=0,193,228
 
 [Color6Faint]
-Color=24,108,96
+Color=0,193,228
 
 [Color6Intense]
-Color=22,160,133
+Color=0,193,228
 
 [Color7]
 Color=252,252,252
@@ -80,21 +80,21 @@ Color=99,104,109
 Color=255,255,255
 
 [Foreground]
-Color=0,255,0
+Color=255,255,255
 
 [ForegroundFaint]
-Color=85,255,0
+Color=255,255,255
 
 [ForegroundIntense]
-Color=85,255,0
+Color=255,255,255
 
 [General]
 Anchor=0.5,0.5
-Blur=false
+Blur=true
 ColorRandomization=false
-Description=Breath
+Description=DeepBlue
 FillStyle=Tile
-Opacity=0.96
+Opacity=1
 Wallpaper=
 WallpaperFlipType=NoFlip
 WallpaperOpacity=1
