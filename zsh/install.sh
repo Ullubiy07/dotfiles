@@ -1,2 +1,3 @@
+#!/bin/zsh
 \cp zshrc ~/.zshrc
-source ~/.zshrc 
+
