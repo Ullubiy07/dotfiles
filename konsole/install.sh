@@ -1,2 +1,2 @@
-cp Custom.profile DeepBlue.colorscheme -r ~/.local/share/konsole
+cp Konsole.profile DeepBlue.colorscheme -r ~/.local/share/konsole
 \cp konsolerc ~/.config/konsolerc
