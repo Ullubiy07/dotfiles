@@ -25,3 +25,4 @@ sudo awg show
 # Выключить VPN (обычный интернет вернется сразу же)
 sudo awg-quick down awg0
 
+ullubiy ALL=(root) NOPASSWD: /home/ullubiy/.config/vpn/switcher.sh
