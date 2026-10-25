@@ -1,14 +1,107 @@
+#!/bin/zsh
+
+# Use powerline
+USE_POWERLINE="true"
+# Has weird character width
+# Example:
+#    is not a diamond
+HAS_WIDECHARS="false"
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+#if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+#  source /usr/share/zsh/manjaro-zsh-prompt
+#fi
+
 get_git_branch() {
     local branch
     branch=$(git branch --show-current 2>/dev/null)
     [[ -n "$branch" ]] && echo "($branch)"
 }
 
+yazi() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+    /usr/bin/yazi "$@" --cwd-file="$tmp"
+    echo -e -n "\x1b[\x36 q" # change cursor to steady bar
+    if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        builtin cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
+}
+
+tr() {
+    trans ru:en "$1"
+}
+
+trs() {
+    trans ru:en "$1" && trans :en -b -p "$1" &> /dev/null
+}
+
+trr() {
+    trans en:ru "$1"
+}
+
+# Включаем подстановку переменных и функций
 setopt PROMPT_SUBST
 
-PROMPT='%F{#90EE90}%n%f@%m %F{#90EE90}%~%f $(get_git_branch)> '
+integer cmd_start_time=0
+cmd_execution_time=""
+cmd_last_status=""
+
+# Хук перед выполнением команды: запоминаем время старта
+preexec() {
+    cmd_start_time=$SECONDS
+}
+
+# Хук перед отрисовкой приглашения: считаем статус и время
+precmd() {
+    local last_code=$?
+
+    # 1. Формируем статус ошибки для ПРАВОГО угла (красный цвет)
+    if (( last_code != 0 )); then
+        cmd_last_status="%F{red}[$last_code]%f "
+    else
+        cmd_last_status=""
+    fi
+
+    # 2. Формируем время работы команды
+    if (( cmd_start_time > 0 )); then
+        integer elapsed=$(( SECONDS - cmd_start_time ))
+        cmd_start_time=0
+
+        if (( elapsed >= 60 )); then
+            integer mins=$(( elapsed / 60 ))
+            integer secs=$(( elapsed % 60 ))
+            cmd_execution_time="${mins}m${secs}s"
+        else
+            cmd_execution_time="${elapsed}s"
+        fi
+    fi
+}
+
+# Функция для вывода Git-ветки
+get_git_branch() {
+    local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+    if [ -n "$branch" ]; then
+        echo "($branch)"
+    fi
+}
+
+wr() {
+    command kwrite "$@"
+}
+
+# Левая сторона: чистая первая строка + чистый ввод на второй
+PROMPT='%F{green}%n%f@%m %F{green}%~%f $(get_git_branch)
+❯ '
+
+# Правая сторона: [код ошибки] + время работы
+RPROMPT='${cmd_last_status}%F{242}${cmd_execution_time}%f'
 
 export LS_COLORS="di=00;34"
-
-source ~/.config/zsh/zsh.conf
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+export PATH=$PATH:$(go env GOPATH)/bin
+
